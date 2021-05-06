@@ -84,3 +84,46 @@ class DataSplitter:
             self.df_test = self.df_test.reset_index(drop=True)
 
             count += 1
+
+
+
+'''
+Sample way of sending input to the class =>
+dic_of_dataframe = {
+    'NIH' : df_nih[['image_path','dataset','pnuemothorax_mask','pneumothorax']],
+    'MIMIC':df_mimic[['image_path','dataset','pnuemothorax_mask','pneumothorax']],
+    'CHEXPERT':df_chexpert[['image_path','dataset','pnuemothorax_mask','pneumothorax']],
+    'KAGGLE_TRAIN':df_kaggle_train[['image_path','dataset','pnuemothorax_mask','pneumothorax']],
+    'KAGGLE_TEST':df_kaggle_test[['image_path','dataset','pnuemothorax_mask','pneumothorax']]
+}
+
+x_col_name = 'image_path'
+y_col_name = 'pnuemothorax_mask'
+dataset_col_name = None
+
+train = {
+    'NIH':0.70,
+    'MIMIC':0.70,
+    'CHEXPERT':0.70,
+    'KAGGLE_TRAIN':0.70,
+    'KAGGLE_TEST':0.70
+}
+
+val = {
+    'NIH':0.15,
+    'MIMIC':0.15,
+    'CHEXPERT':0.15,
+    'KAGGLE_TRAIN':0.15,
+    'KAGGLE_TEST':0.15
+}
+
+test = {
+    'NIH':0.15,
+    'MIMIC':0.15,
+    'CHEXPERT':0.15,
+    'KAGGLE_TRAIN':0.15,
+    'KAGGLE_TEST':0.15
+}
+
+dd = DataSplitter(dic_of_dataframe,x_col_name,y_col_name,dataset_col_name,train,val,test)
+'''
