@@ -139,3 +139,4 @@ class Semantic_loss_functions(object):
 
 #Reference --> https://github.com/shruti-jadon/Semantic-Segmentation-Loss-Functions/blob/master/loss_functions.py
 #Paper --> https://arxiv.org/abs/2006.14822
+#Kaggle --> https://www.kaggle.com/bigironsphere/loss-function-library-keras-pytorch
